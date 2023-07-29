@@ -32,16 +32,28 @@ li:hover {
   background-color: #f0f0f0;
   cursor: pointer;
 }
+.container {
+  max-width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+.container vid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
 </style>
 </head>
 <body>
-  <h2>images</h2>
-  <ul>
-  <li><a href="collections/astro">astro</a></li>
-  </ul>
   <h2>timelapses</h2>
-  <ul>
-  <li><a href="timelapses/australia">australia</a></li>
-  </ul>
+    
+  <div class="container" id="div_video_0">
+    <h3>twelve apostles east</h3>
+    <video class="vid" id="video_0" controls>
+      <source src="https://smoorman1024.blob.core.windows.net/timelapse/twelve_apostles_east.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>   
+  </div>
 </body>
 </html>
