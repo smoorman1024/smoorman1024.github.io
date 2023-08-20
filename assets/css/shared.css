@@ -16,13 +16,12 @@ ul {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
 }
 li {
   padding: 10px;
-  border-bottom: 1px solid #ccc;
-  color: #839496;
+  border-bottom: none;
 }
 li:last-child {
   border-bottom: none; /* Remove the border on the last list item */
