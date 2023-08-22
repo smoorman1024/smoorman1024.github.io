@@ -53,80 +53,147 @@ li:hover {
   margin: 10px auto;
 }
 </style>
+<script>
+function slide_display(index) {
+	console.log("slide_display " + index);
+	var i;
+	var slides = document.getElementsByClassName("slide");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+  var overlay = document.getElementById("div_overlay");
+  overlay.style.display = "block";
+	var overlay_image = document.getElementById("div_overlay_image_"+index);
+	overlay_image.style.display = "block";
+}
+function slide_undisplay(i) {
+	var i;
+	var slides = document.getElementsByClassName("overlay_img");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+	var overlay = document.getElementById("div_overlay");
+	overlay.style.display = "none";
+}
+</script>
 </head>
 <body>
 <h2>yellowstone</h2>
 <ul>
 <li>
-<div class="container" id="div_image_0">
+<div onclick="display(0)" class="container" id="div_image_0">
 <img class="img" id="image_0" src="https://smoorman1024.blob.core.windows.net/yellowstone/DSC_2559_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_1">
+<div onclick="display(1)" class="container" id="div_image_1">
 <img class="img" id="image_1" src="https://smoorman1024.blob.core.windows.net/yellowstone/DSC_2583_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_2">
+<div onclick="display(2)" class="container" id="div_image_2">
 <img class="img" id="image_2" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9238_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_3">
+<div onclick="display(3)" class="container" id="div_image_3">
 <img class="img" id="image_3" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9255_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_4">
+<div onclick="display(4)" class="container" id="div_image_4">
 <img class="img" id="image_4" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9264_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_5">
+<div onclick="display(5)" class="container" id="div_image_5">
 <img class="img" id="image_5" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9278_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_6">
+<div onclick="display(6)" class="container" id="div_image_6">
 <img class="img" id="image_6" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9349_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_7">
+<div onclick="display(7)" class="container" id="div_image_7">
 <img class="img" id="image_7" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9404_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_8">
+<div onclick="display(8)" class="container" id="div_image_8">
 <img class="img" id="image_8" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9408_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_9">
+<div onclick="display(9)" class="container" id="div_image_9">
 <img class="img" id="image_9" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9411_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_10">
+<div onclick="display(10)" class="container" id="div_image_10">
 <img class="img" id="image_10" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9418_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_11">
+<div onclick="display(11)" class="container" id="div_image_11">
 <img class="img" id="image_11" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9422_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_12">
+<div onclick="display(12)" class="container" id="div_image_12">
 <img class="img" id="image_12" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9429_edited-1.jpg"/>
 </div>
 </li>
 <li>
-<div class="container" id="div_image_13">
+<div onclick="display(13)" class="container" id="div_image_13">
 <img class="img" id="image_13" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9434_edited-1.jpg"/>
 </div>
 </li>
 </ul>
+<div class="div_overlay">
+<div onclick="undisplay(0)" class="overlay_container" id="div_overlay_image_0" style="display:none">
+<img class="overlay_img" id="overlay_image_0" src="https://smoorman1024.blob.core.windows.net/yellowstone/DSC_2559_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(1)" class="overlay_container" id="div_overlay_image_1" style="display:none">
+<img class="overlay_img" id="overlay_image_1" src="https://smoorman1024.blob.core.windows.net/yellowstone/DSC_2583_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(2)" class="overlay_container" id="div_overlay_image_2" style="display:none">
+<img class="overlay_img" id="overlay_image_2" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9238_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(3)" class="overlay_container" id="div_overlay_image_3" style="display:none">
+<img class="overlay_img" id="overlay_image_3" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9255_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(4)" class="overlay_container" id="div_overlay_image_4" style="display:none">
+<img class="overlay_img" id="overlay_image_4" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9264_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(5)" class="overlay_container" id="div_overlay_image_5" style="display:none">
+<img class="overlay_img" id="overlay_image_5" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9278_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(6)" class="overlay_container" id="div_overlay_image_6" style="display:none">
+<img class="overlay_img" id="overlay_image_6" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9349_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(7)" class="overlay_container" id="div_overlay_image_7" style="display:none">
+<img class="overlay_img" id="overlay_image_7" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9404_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(8)" class="overlay_container" id="div_overlay_image_8" style="display:none">
+<img class="overlay_img" id="overlay_image_8" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9408_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(9)" class="overlay_container" id="div_overlay_image_9" style="display:none">
+<img class="overlay_img" id="overlay_image_9" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9411_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(10)" class="overlay_container" id="div_overlay_image_10" style="display:none">
+<img class="overlay_img" id="overlay_image_10" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9418_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(11)" class="overlay_container" id="div_overlay_image_11" style="display:none">
+<img class="overlay_img" id="overlay_image_11" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9422_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(12)" class="overlay_container" id="div_overlay_image_12" style="display:none">
+<img class="overlay_img" id="overlay_image_12" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9429_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(13)" class="overlay_container" id="div_overlay_image_13" style="display:none">
+<img class="overlay_img" id="overlay_image_13" src="https://smoorman1024.blob.core.windows.net/yellowstone/IMG_9434_edited-1.jpg"/>
+</div>
+</div>
 </body>
 </html>
