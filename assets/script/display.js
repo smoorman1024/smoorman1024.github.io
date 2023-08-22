@@ -1,7 +1,7 @@
 function display(index) {
 	console.log("slide_display " + index);
 	var i;
-	var slides = document.getElementsByClassName("slide");
+	var slides = document.getElementsByClassName("overlay_container");
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";  
 	}
