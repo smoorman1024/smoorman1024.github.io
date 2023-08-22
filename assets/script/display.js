@@ -1,4 +1,4 @@
-function slide_display(index) {
+function display(index) {
 	console.log("slide_display " + index);
 	var i;
 	var slides = document.getElementsByClassName("slide");
@@ -10,7 +10,7 @@ function slide_display(index) {
 	var overlay_image = document.getElementById("div_overlay_image_"+index);
 	overlay_image.style.display = "block";
 }
-function slide_undisplay(i) {
+function undisplay(i) {
 	var i;
 	var slides = document.getElementsByClassName("overlay_img");
 	for (i = 0; i < slides.length; i++) {
