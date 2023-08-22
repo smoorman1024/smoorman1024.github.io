@@ -12,7 +12,7 @@ function display(index) {
 }
 function undisplay(i) {
 	var i;
-	var slides = document.getElementsByClassName("overlay_img");
+	var slides = document.getElementsByClassName("overlay_container");
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";  
 	}
