@@ -8,7 +8,7 @@ function display(index) {
   var overlay = document.getElementById("div_overlay");
   overlay.style.display = "block";
 	var overlay_image = document.getElementById("div_overlay_image_"+index);
-	overlay_image.style.display = "flex";
+	overlay_image.style.display = "block";
 }
 function undisplay(i) {
 	var i;

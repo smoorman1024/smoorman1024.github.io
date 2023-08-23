@@ -59,14 +59,15 @@ li:hover {
   height: 100%;
 }
 .overlay_container {
+  width: 100%;
   max-width: 100%;
-  max-height: 100%;
+  position: relative;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
-.overlay_img img {
-  max-width: 100%;
-  max-height: 100%;
+.overlay_container img {
+  width: 100%;
+  height: auto;
 }
 </style>
 <script>
@@ -80,7 +81,7 @@ function display(index) {
   var overlay = document.getElementById("div_overlay");
   overlay.style.display = "block";
 	var overlay_image = document.getElementById("div_overlay_image_"+index);
-	overlay_image.style.display = "flex";
+	overlay_image.style.display = "block";
 }
 function undisplay(i) {
 	var i;
@@ -199,64 +200,64 @@ function undisplay(i) {
 </ul>
 <div class="div_overlay" id="div_overlay" style="display: none;">
 <div onclick="undisplay(0)" class="overlay_container" id="div_overlay_image_0" style="display:none">
-<img class="overlay_img" id="overlay_image_0" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0014_edited-1.jpg"/>
+<img id="overlay_image_0" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0014_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(1)" class="overlay_container" id="div_overlay_image_1" style="display:none">
-<img class="overlay_img" id="overlay_image_1" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0030.JPG"/>
+<img id="overlay_image_1" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0030.JPG"/>
 </div>
 <div onclick="undisplay(2)" class="overlay_container" id="div_overlay_image_2" style="display:none">
-<img class="overlay_img" id="overlay_image_2" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0042_edited-1.jpg"/>
+<img id="overlay_image_2" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0042_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(3)" class="overlay_container" id="div_overlay_image_3" style="display:none">
-<img class="overlay_img" id="overlay_image_3" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0060.JPG"/>
+<img id="overlay_image_3" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0060.JPG"/>
 </div>
 <div onclick="undisplay(4)" class="overlay_container" id="div_overlay_image_4" style="display:none">
-<img class="overlay_img" id="overlay_image_4" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0061_edited-1.jpg"/>
+<img id="overlay_image_4" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0061_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(5)" class="overlay_container" id="div_overlay_image_5" style="display:none">
-<img class="overlay_img" id="overlay_image_5" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0909_edited-1.jpg"/>
+<img id="overlay_image_5" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0909_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(6)" class="overlay_container" id="div_overlay_image_6" style="display:none">
-<img class="overlay_img" id="overlay_image_6" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0991_edited-1.jpg"/>
+<img id="overlay_image_6" src="https://smoorman1024.blob.core.windows.net/astro/DSC_0991_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(7)" class="overlay_container" id="div_overlay_image_7" style="display:none">
-<img class="overlay_img" id="overlay_image_7" src="https://smoorman1024.blob.core.windows.net/astro/DSC_1876_edited-1.jpg"/>
+<img id="overlay_image_7" src="https://smoorman1024.blob.core.windows.net/astro/DSC_1876_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(8)" class="overlay_container" id="div_overlay_image_8" style="display:none">
-<img class="overlay_img" id="overlay_image_8" src="https://smoorman1024.blob.core.windows.net/astro/DSC_1897_edited-1.jpg"/>
+<img id="overlay_image_8" src="https://smoorman1024.blob.core.windows.net/astro/DSC_1897_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(9)" class="overlay_container" id="div_overlay_image_9" style="display:none">
-<img class="overlay_img" id="overlay_image_9" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2129_edited-1.jpg"/>
+<img id="overlay_image_9" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2129_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(10)" class="overlay_container" id="div_overlay_image_10" style="display:none">
-<img class="overlay_img" id="overlay_image_10" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2641_edited-1.jpg"/>
+<img id="overlay_image_10" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2641_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(11)" class="overlay_container" id="div_overlay_image_11" style="display:none">
-<img class="overlay_img" id="overlay_image_11" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2645_edited-1.jpg"/>
+<img id="overlay_image_11" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2645_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(12)" class="overlay_container" id="div_overlay_image_12" style="display:none">
-<img class="overlay_img" id="overlay_image_12" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2952_edited-1.jpg"/>
+<img id="overlay_image_12" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2952_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(13)" class="overlay_container" id="div_overlay_image_13" style="display:none">
-<img class="overlay_img" id="overlay_image_13" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2970_edited-1.jpg"/>
+<img id="overlay_image_13" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2970_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(14)" class="overlay_container" id="div_overlay_image_14" style="display:none">
-<img class="overlay_img" id="overlay_image_14" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2975_edited-1.jpg"/>
+<img id="overlay_image_14" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2975_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(15)" class="overlay_container" id="div_overlay_image_15" style="display:none">
-<img class="overlay_img" id="overlay_image_15" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2977_edited-1.jpg"/>
+<img id="overlay_image_15" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2977_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(16)" class="overlay_container" id="div_overlay_image_16" style="display:none">
-<img class="overlay_img" id="overlay_image_16" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2998_edited-1.jpg"/>
+<img id="overlay_image_16" src="https://smoorman1024.blob.core.windows.net/astro/DSC_2998_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(17)" class="overlay_container" id="div_overlay_image_17" style="display:none">
-<img class="overlay_img" id="overlay_image_17" src="https://smoorman1024.blob.core.windows.net/astro/DSC_4325_edited-1.jpg"/>
+<img id="overlay_image_17" src="https://smoorman1024.blob.core.windows.net/astro/DSC_4325_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(18)" class="overlay_container" id="div_overlay_image_18" style="display:none">
-<img class="overlay_img" id="overlay_image_18" src="https://smoorman1024.blob.core.windows.net/astro/out.lunar.00010_edited-1.jpg"/>
+<img id="overlay_image_18" src="https://smoorman1024.blob.core.windows.net/astro/out.lunar.00010_edited-1.jpg"/>
 </div>
 <div onclick="undisplay(19)" class="overlay_container" id="div_overlay_image_19" style="display:none">
-<img class="overlay_img" id="overlay_image_19" src="https://smoorman1024.blob.core.windows.net/astro/out.lunar.00085.jpg"/>
+<img id="overlay_image_19" src="https://smoorman1024.blob.core.windows.net/astro/out.lunar.00085.jpg"/>
 </div>
 </div>
 </body>
