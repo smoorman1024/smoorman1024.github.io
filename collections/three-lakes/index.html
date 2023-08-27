@@ -1,0 +1,184 @@
+<html>
+<head>
+<style>
+body {
+  background-color: #002b36;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #586e75;
+}
+h2 {
+  color: #657b83;
+}
+a {
+  color: #268bd2;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+li {
+  padding: 10px;
+  border-bottom: none;
+}
+li:last-child {
+  border-bottom: none; /* Remove the border on the last list item */
+}
+
+li:hover {
+  background-color: #073642;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+.container img {
+  max-width: 100%;
+  max-height: 90vh;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+.container vid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+.div_overlay {
+  position: fixed;
+  inset: 0.5em;
+  width: 100%;
+  height: 100%;
+}
+.overlay_container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.overlay_container img {
+  width: 100%;
+  height: auto;
+}
+</style>
+<script>
+function display(index) {
+	console.log("slide_display " + index);
+	var i;
+	var slides = document.getElementsByClassName("overlay_container");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+  var overlay = document.getElementById("div_overlay");
+  overlay.style.display = "block";
+	var overlay_image = document.getElementById("div_overlay_image_"+index);
+	overlay_image.style.display = "block";
+}
+function undisplay(i) {
+	var i;
+	var slides = document.getElementsByClassName("overlay_container");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+	var overlay = document.getElementById("div_overlay");
+	overlay.style.display = "none";
+}
+</script>
+</head>
+<body>
+<h2>three-lakes</h2>
+<ul>
+<li>
+<div onclick="display(0)" class="container" id="div_image_0">
+<img class="img" id="image_0" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4927_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(1)" class="container" id="div_image_1">
+<img class="img" id="image_1" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4933_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(2)" class="container" id="div_image_2">
+<img class="img" id="image_2" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4941_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(3)" class="container" id="div_image_3">
+<img class="img" id="image_3" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4945_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(4)" class="container" id="div_image_4">
+<img class="img" id="image_4" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4947_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(5)" class="container" id="div_image_5">
+<img class="img" id="image_5" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4949_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(6)" class="container" id="div_image_6">
+<img class="img" id="image_6" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4950_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(7)" class="container" id="div_image_7">
+<img class="img" id="image_7" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4951_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(8)" class="container" id="div_image_8">
+<img class="img" id="image_8" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4953_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(9)" class="container" id="div_image_9">
+<img class="img" id="image_9" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4962_edited-1.jpg"/>
+</div>
+</li>
+</ul>
+<div onclick=\'undisplay(0)" class="div_overlay" id="div_overlay" style="display: none;">
+<div onclick="undisplay(0)" class="overlay_container" id="div_overlay_image_0" style="display:none">
+<img id="overlay_image_0" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4927_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(1)" class="overlay_container" id="div_overlay_image_1" style="display:none">
+<img id="overlay_image_1" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4933_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(2)" class="overlay_container" id="div_overlay_image_2" style="display:none">
+<img id="overlay_image_2" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4941_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(3)" class="overlay_container" id="div_overlay_image_3" style="display:none">
+<img id="overlay_image_3" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4945_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(4)" class="overlay_container" id="div_overlay_image_4" style="display:none">
+<img id="overlay_image_4" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4947_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(5)" class="overlay_container" id="div_overlay_image_5" style="display:none">
+<img id="overlay_image_5" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4949_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(6)" class="overlay_container" id="div_overlay_image_6" style="display:none">
+<img id="overlay_image_6" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4950_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(7)" class="overlay_container" id="div_overlay_image_7" style="display:none">
+<img id="overlay_image_7" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4951_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(8)" class="overlay_container" id="div_overlay_image_8" style="display:none">
+<img id="overlay_image_8" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4953_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(9)" class="overlay_container" id="div_overlay_image_9" style="display:none">
+<img id="overlay_image_9" src="https://smoorman1024.blob.core.windows.net/three-lakes/DSC_4962_edited-1.jpg"/>
+</div>
+</div>
+</body>
+</html>
