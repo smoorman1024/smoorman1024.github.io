@@ -1,0 +1,297 @@
+<html>
+<head>
+<style>
+body {
+  background-color: #002b36;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #586e75;
+}
+h2 {
+  color: #657b83;
+}
+a {
+  color: #268bd2;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+li {
+  padding: 10px;
+  border-bottom: none;
+}
+li:last-child {
+  border-bottom: none; /* Remove the border on the last list item */
+}
+
+li:hover {
+  background-color: #073642;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+.container img {
+  max-width: 100%;
+  max-height: 90vh;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+.container vid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+.div_overlay {
+  position: fixed;
+  inset: 0.5em;
+  width: 100%;
+  height: 100%;
+}
+.overlay_container {
+  height: 98%;
+  max-width: 98%;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  inset: 0px;
+}
+.overlay_container img {
+  width: 100%;
+  height: auto;
+}
+</style>
+<script>
+function display(index) {
+	console.log("slide_display " + index);
+	var i;
+	var slides = document.getElementsByClassName("overlay_container");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+  var overlay = document.getElementById("div_overlay");
+  overlay.style.display = "block";
+	var overlay_image = document.getElementById("div_overlay_image_"+index);
+	overlay_image.style.display = "block";
+}
+function undisplay(i) {
+	var i;
+	var slides = document.getElementsByClassName("overlay_container");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+	var overlay = document.getElementById("div_overlay");
+	overlay.style.display = "none";
+}
+</script>
+</head>
+<body>
+<h2>animals</h2>
+<ul>
+<li>
+<div onclick="display(0)" class="container" id="div_image_0">
+<img class="img" id="image_0" src="https://smoorman1024.blob.core.windows.net/animals/DSC_0902-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(1)" class="container" id="div_image_1">
+<img class="img" id="image_1" src="https://smoorman1024.blob.core.windows.net/animals/DSC_0993-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(2)" class="container" id="div_image_2">
+<img class="img" id="image_2" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1000-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(3)" class="container" id="div_image_3">
+<img class="img" id="image_3" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1004-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(4)" class="container" id="div_image_4">
+<img class="img" id="image_4" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1011-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(5)" class="container" id="div_image_5">
+<img class="img" id="image_5" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1040-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(6)" class="container" id="div_image_6">
+<img class="img" id="image_6" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1089-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(7)" class="container" id="div_image_7">
+<img class="img" id="image_7" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1184-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(8)" class="container" id="div_image_8">
+<img class="img" id="image_8" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1196-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(9)" class="container" id="div_image_9">
+<img class="img" id="image_9" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1408-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(10)" class="container" id="div_image_10">
+<img class="img" id="image_10" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1686-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(11)" class="container" id="div_image_11">
+<img class="img" id="image_11" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2285-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(12)" class="container" id="div_image_12">
+<img class="img" id="image_12" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2376_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(13)" class="container" id="div_image_13">
+<img class="img" id="image_13" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2392_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(14)" class="container" id="div_image_14">
+<img class="img" id="image_14" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2397_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(15)" class="container" id="div_image_15">
+<img class="img" id="image_15" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2416_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(16)" class="container" id="div_image_16">
+<img class="img" id="image_16" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2454_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(17)" class="container" id="div_image_17">
+<img class="img" id="image_17" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2583_edited-1.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(18)" class="container" id="div_image_18">
+<img class="img" id="image_18" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3421-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(19)" class="container" id="div_image_19">
+<img class="img" id="image_19" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3434-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(20)" class="container" id="div_image_20">
+<img class="img" id="image_20" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3458-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(21)" class="container" id="div_image_21">
+<img class="img" id="image_21" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3539-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(22)" class="container" id="div_image_22">
+<img class="img" id="image_22" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3540-edited.jpg"/>
+</div>
+</li>
+<li>
+<div onclick="display(23)" class="container" id="div_image_23">
+<img class="img" id="image_23" src="https://smoorman1024.blob.core.windows.net/animals/IMG_9132_edited-1.jpg"/>
+</div>
+</li>
+</ul>
+<div onclick=\'undisplay(0)" class="div_overlay" id="div_overlay" style="display: none;">
+<div onclick="undisplay(0)" class="overlay_container" id="div_overlay_image_0" style="display:none">
+<img id="overlay_image_0" src="https://smoorman1024.blob.core.windows.net/animals/DSC_0902-edited.jpg"/>
+</div>
+<div onclick="undisplay(1)" class="overlay_container" id="div_overlay_image_1" style="display:none">
+<img id="overlay_image_1" src="https://smoorman1024.blob.core.windows.net/animals/DSC_0993-edited.jpg"/>
+</div>
+<div onclick="undisplay(2)" class="overlay_container" id="div_overlay_image_2" style="display:none">
+<img id="overlay_image_2" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1000-edited.jpg"/>
+</div>
+<div onclick="undisplay(3)" class="overlay_container" id="div_overlay_image_3" style="display:none">
+<img id="overlay_image_3" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1004-edited.jpg"/>
+</div>
+<div onclick="undisplay(4)" class="overlay_container" id="div_overlay_image_4" style="display:none">
+<img id="overlay_image_4" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1011-edited.jpg"/>
+</div>
+<div onclick="undisplay(5)" class="overlay_container" id="div_overlay_image_5" style="display:none">
+<img id="overlay_image_5" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1040-edited.jpg"/>
+</div>
+<div onclick="undisplay(6)" class="overlay_container" id="div_overlay_image_6" style="display:none">
+<img id="overlay_image_6" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1089-edited.jpg"/>
+</div>
+<div onclick="undisplay(7)" class="overlay_container" id="div_overlay_image_7" style="display:none">
+<img id="overlay_image_7" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1184-edited.jpg"/>
+</div>
+<div onclick="undisplay(8)" class="overlay_container" id="div_overlay_image_8" style="display:none">
+<img id="overlay_image_8" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1196-edited.jpg"/>
+</div>
+<div onclick="undisplay(9)" class="overlay_container" id="div_overlay_image_9" style="display:none">
+<img id="overlay_image_9" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1408-edited.jpg"/>
+</div>
+<div onclick="undisplay(10)" class="overlay_container" id="div_overlay_image_10" style="display:none">
+<img id="overlay_image_10" src="https://smoorman1024.blob.core.windows.net/animals/DSC_1686-edited.jpg"/>
+</div>
+<div onclick="undisplay(11)" class="overlay_container" id="div_overlay_image_11" style="display:none">
+<img id="overlay_image_11" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2285-edited.jpg"/>
+</div>
+<div onclick="undisplay(12)" class="overlay_container" id="div_overlay_image_12" style="display:none">
+<img id="overlay_image_12" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2376_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(13)" class="overlay_container" id="div_overlay_image_13" style="display:none">
+<img id="overlay_image_13" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2392_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(14)" class="overlay_container" id="div_overlay_image_14" style="display:none">
+<img id="overlay_image_14" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2397_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(15)" class="overlay_container" id="div_overlay_image_15" style="display:none">
+<img id="overlay_image_15" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2416_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(16)" class="overlay_container" id="div_overlay_image_16" style="display:none">
+<img id="overlay_image_16" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2454_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(17)" class="overlay_container" id="div_overlay_image_17" style="display:none">
+<img id="overlay_image_17" src="https://smoorman1024.blob.core.windows.net/animals/DSC_2583_edited-1.jpg"/>
+</div>
+<div onclick="undisplay(18)" class="overlay_container" id="div_overlay_image_18" style="display:none">
+<img id="overlay_image_18" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3421-edited.jpg"/>
+</div>
+<div onclick="undisplay(19)" class="overlay_container" id="div_overlay_image_19" style="display:none">
+<img id="overlay_image_19" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3434-edited.jpg"/>
+</div>
+<div onclick="undisplay(20)" class="overlay_container" id="div_overlay_image_20" style="display:none">
+<img id="overlay_image_20" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3458-edited.jpg"/>
+</div>
+<div onclick="undisplay(21)" class="overlay_container" id="div_overlay_image_21" style="display:none">
+<img id="overlay_image_21" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3539-edited.jpg"/>
+</div>
+<div onclick="undisplay(22)" class="overlay_container" id="div_overlay_image_22" style="display:none">
+<img id="overlay_image_22" src="https://smoorman1024.blob.core.windows.net/animals/DSC_3540-edited.jpg"/>
+</div>
+<div onclick="undisplay(23)" class="overlay_container" id="div_overlay_image_23" style="display:none">
+<img id="overlay_image_23" src="https://smoorman1024.blob.core.windows.net/animals/IMG_9132_edited-1.jpg"/>
+</div>
+</div>
+</body>
+</html>
